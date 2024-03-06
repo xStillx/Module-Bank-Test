@@ -79,7 +79,6 @@ class CurrenciesFragment : Fragment(R.layout.fragment_currencies) {
 
     private fun readData() {
         viewModel.readAllData!!.observe(viewLifecycleOwner) {
-            viewBinding.tvHave.text = "You have: ${it[0].have}${it[0].symbol}"
             adapterC.submitList(it.filter {
                 it.symbol != "₽"
             })

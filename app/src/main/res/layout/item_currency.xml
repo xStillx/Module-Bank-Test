@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/item_corner_background"
+    android:elevation="@dimen/margin_s"
+    android:layout_margin="@dimen/margin_x">
+
+    <TextView
+        android:id="@+id/tv_currency_name"
+        tools:text="EUR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/text_size_xxxl"
+        android:layout_marginStart="@dimen/margin_xxl"
+        android:layout_marginBottom="@dimen/margin_x"/>
+
+    <TextView
+        android:id="@+id/tv_have"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_currency_name"
+        app:layout_constraintStart_toStartOf="@id/tv_currency_name"
+        android:layout_marginTop="@dimen/margin_x"
+        tools:text="You have: 100"
+        android:textSize="@dimen/text_size_x"/>
+
+    <EditText
+        android:id="@+id/et_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:textSize="@dimen/text_size_xl"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_currency_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_currency_name"
+        tools:text="100"
+        android:inputType="number"
+        tools:ignore="LabelFor"
+        android:hint="@string/_0_00"
+        android:importantForAutofill="no"
+        android:layout_marginEnd="@dimen/margin_x"/>
+
+    <TextView
+        android:id="@+id/tv_equality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_x"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_have"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_have"
+        tools:text="1 = 0.86"
+        android:layout_marginEnd="@dimen/margin_x"/>
+
+    <TextView
+        android:id="@+id/tv_exchange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exchange"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/text_size_x"
+        android:padding="@dimen/margin_x"
+        android:textColor="@color/blue"
+        android:layout_margin="@dimen/margin_x"
+        android:textAllCaps="false"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
